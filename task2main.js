@@ -73,7 +73,7 @@ app.post("/login", function (req, res) {
    { res.status(401).send("Login failed");
     console.log("kghj")}
      else{
-        userdata.pages.push({ url: "/login", date: Date.now() });
+       
     res.cookie("userdata", {user:name, pages: []}, { maxAge: 30000,signed: true});
     }
     res.send(userdata);
